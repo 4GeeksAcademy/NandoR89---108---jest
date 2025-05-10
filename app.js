@@ -4,14 +4,6 @@ let oneEuroIs = {
     "GBP": 0.87, // british pound
 }
 
-const multiply = (a, b) => {
-    return a*b
-}
-
-const division = (a, b) => {
-    return a/b
-}
-
 
 const fromEuroToDollar = function(valueInEuro) {
     // Convertimos el valor a dólares
@@ -38,13 +30,13 @@ const fromEuroToPound = function(valueInEuro) {
 
 // fromEuroToPound equivale a 1 Pound = 1 Euros / oneEuroIs.GBP 
 
-function fromDollartoYen (valueInDollar) {
+function fromDollarToYen (valueInDollar) {
     let valueInEuro = valueInDollar / oneEuroIs.USD // línea 35
     let valueInYen = fromEuroToYen(valueInEuro)
     return valueInYen
 }
 
-console.log(fromDollartoYen(200))
+console.log(fromDollarToYen(20))
 
 function fromYenToPound (valueInYen) {
     let valueInEuro = valueInYen / oneEuroIs.JPY // línea 37
@@ -52,6 +44,6 @@ function fromYenToPound (valueInYen) {
     return valueInPound
 }
 
-console.log(fromYenToPound(200))
+console.log(fromYenToPound(20))
 
-module.exports = {multiply, division, fromEuroToDollar, fromEuroToYen, fromEuroToPound, fromDollartoYen, fromYenToPound}
+module.exports = {fromEuroToDollar, fromEuroToYen, fromEuroToPound, fromDollarToYen, fromYenToPound}
